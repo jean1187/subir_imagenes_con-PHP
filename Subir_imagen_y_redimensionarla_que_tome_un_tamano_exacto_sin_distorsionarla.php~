@@ -4,8 +4,7 @@ if(!empty($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
  
    $image = new ModifiedImage($_FILES['image']['tmp_name'],true);
    $img = 'img_' . $_FILES['image']['name'];
-  // $image->resizeToFit(268, 202, true, 'alpha'); //solo funciona el background como alpha cunado la imagen es png
-   $image->resizeToFit(268, 202, true, 'ffffff');
+   $image->resizeToFit(268, 202, true, 'alpha');
    $image->save($img);
 ?>
 Imagen grabada:
